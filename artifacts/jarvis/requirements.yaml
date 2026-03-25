@@ -1,0 +1,13 @@
+packages:
+  "framer-motion": "Crucial for complex glowing, pulsing, rotating rings, and layout animations typical of sci-fi UIs"
+  "clsx": "Utility for constructing className strings conditionally"
+  "tailwind-merge": "Utility for merging tailwind classes safely"
+  "lucide-react": "Using standard icons for agents and system status"
+
+images:
+  - path: "artifacts/jarvis/public/images/tech-bg.png"
+    description: "Dark, moody sci-fi holographic grid background with subtle electric blue geometric nodes, scanning lines, and particle dust. Very minimal, mostly negative space, deep space navy background #0a0e1a. No text."
+    aspect_ratio: "16:9"
+
+notes:
+  - "Purely simulated frontend demo, using custom hooks with local state to simulate data streams and system metrics."
