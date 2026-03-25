@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "JARVIS AI Assistant"
+version = "1.0.0"
+id = "artifacts/jarvis"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 21662
+
+[services.development]
+run = "pnpm --filter @workspace/jarvis run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/jarvis", "run", "build" ]
+publicDir = "artifacts/jarvis/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "21662"
+BASE_PATH = "/"
